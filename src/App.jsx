@@ -47,15 +47,15 @@ function App() {
         <div className="ln2">
           <div>
             <input type="range" value={length} onChange={(e)=>{setLength(e.target.value)}} name="length" className='length' min={6} max={20 }/>
-            <label htmlFor="length">length: {length}</label>
+            <label htmlFor="length">Length: {length}</label>
           </div>
           <div>
-            <input type="checkbox" defaultChecked={num} onChange={()=>{setNum((prev)=>!prev)}} name="numbers"/>
-            <label htmlFor="numbers">numbers</label>
+            <input type="checkbox" defaultChecked={num} onChange={()=>{setNum((prev)=>!prev)}} name="numbers" className='checkbox'/>
+            <label htmlFor="numbers">Numbers</label>
           </div>
           <div>
-            <input type="checkbox" defaultChecked={char} onChange={()=>{setChar((prev)=>!prev)}} name="characters"/>
-            <label htmlFor="characters">characters</label>
+            <input type="checkbox" defaultChecked={char} onChange={()=>{setChar((prev)=>!prev)}} name="characters" className='checkbox'/>
+            <label htmlFor="characters">Characters</label>
           </div>
         </div>
       </div>

@@ -1,33 +1,27 @@
 *{
   margin: 0;
-  /* padding: 0; */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  font-family: Verdana, sans-serif;
 }
 
 body{
-  background-color: black;
+  background: linear-gradient(black, rgba(0, 0, 0, 0.6),gray, rgba(0, 0, 0, 0.6), Black);
   color: white;
-}
-
-.container {
-  background-color: rgba(255, 255, 255, 0.14);
-  width: max-content;
-  margin: 36vh auto;
-  text-align: center;
-  border-radius: 12px;
-  padding: 48px;
-}
-
-h1{
-  margin: 0 0 36px 0;
-  text-decoration: underline;
-  text-decoration-thickness: 4px;
-}
-
-.ln1 {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.container {
+  background-color: rgba(50, 33, 33, 0.441);
+  width: 700px;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 36px;
+}
+
+.ln1 {
   margin: 40px 0;
 }
 
@@ -39,36 +33,88 @@ h1{
 }
 
 .ln2>div{
+  border: 1px solid;
+  border-radius: 16px;
+  padding: 0.8rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 8px;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .password {
-  min-width: 250px;
-  width: 25vw;
-  height: 100%;
-  padding: 14.5px;
+  width: 60%;
+  padding: 0.7rem;
+  border: none;
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
 }
 
 button {
   border: none;
-  min-width: 50px;
-  width: 5vw;
-  height: 100%;
-  padding: 13px;
-  background-color: rgb(51, 35, 140);
-  color: white;
+  width: 20%;
+  padding: 0.7rem;
+  background-color: rgb(111, 159, 213);
+  color: rgb(77, 71, 56);
   font-weight: bold;
-  font-size: 17px;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
 }
 
 button:hover{
-  border: 1px solid white;
+  background-color: rgb(83, 120, 223)
+}
+
+.length{
+  -webkit-appearance: none;
+  width: 10rem;
+  height: 12px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.length:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+.length::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 5px;
+  height: 20px;
+  background: rgb(112, 148, 245);
+  cursor: e-resize;
+}
+
+.length::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgb(83, 120, 223);
+  cursor: pointer;
+}
+
+.checkbox{
+  width: 24px;
+  border-radius: 50%;
+}
+
+@media (max-width: 786px) {
+  .container{
+    width: 80vw;
+  }
+
+  .ln2{
+    flex-direction: column;
+  }
+
+  .ln2>div{
+    width: 50vw;
+    padding: 0.4rem;
+  }
 }
